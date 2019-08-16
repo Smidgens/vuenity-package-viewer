@@ -1,0 +1,6 @@
+@mixin centerChild($fill){
+	height: $fill;
+	width: $fill;
+	margin: 0 auto;
+	margin-top: (100% - $fill) * 0.5;
+}
