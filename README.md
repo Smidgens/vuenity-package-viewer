@@ -1,4 +1,4 @@
-# unity-asset-viewer
+# Vue.js Unity Asset Viewer
 
 > An online viewer for Unity store asset packs.
 
