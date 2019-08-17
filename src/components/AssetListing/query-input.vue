@@ -15,7 +15,7 @@
 					<!-- <span class="input-group-text" id="basic-addon1">@</span> -->
 
 					<button  :disabled="disabled" class="btn btn-info btn-sm" @click="refresh()">
-						Refresh
+						<i class="fa fa-refresh"/>
 					</button>
 				</div>
 			</div>

@@ -6,12 +6,18 @@ import router from './router'
 import BootstrapVue from 'bootstrap-vue';
 import VueResource from "vue-resource";
 
+import VueSelect from "vue-select";
+
 import "font-awesome/css/font-awesome.css";
+
 
 Vue.config.productionTip = false
 
+
 Vue.use(BootstrapVue);
 Vue.use(VueResource);
+
+
 /* eslint-disable no-new */
 new Vue({
 	el: "#app",
@@ -19,5 +25,5 @@ new Vue({
 	components: { App },
 	template: "<App/>",
 	mode: "history"
-})
+});
 
