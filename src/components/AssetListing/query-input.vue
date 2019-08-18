@@ -7,10 +7,10 @@
 
 			<div class="input-group col-md-12">
 				
-				 <div class="input-group-prepend">
-					<span class="input-group-text" id="basic-addon1">src</span>
+				<div class="input-group-prepend">
+					<span class="input-group-text">File</span>
 				</div>
-				<input :disabled="disabled" type="text" class="form-control" v-model="query" placeholder="http://my-data.json" aria-label="Username" aria-describedby="basic-addon1" >
+				<input :disabled="disabled" type="text" class="form-control" v-model="query" placeholder="http://my-data.json">
 				<div class="input-group-append">
 					<!-- <span class="input-group-text" id="basic-addon1">@</span> -->
 

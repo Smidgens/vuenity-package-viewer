@@ -27,23 +27,19 @@
 								</td>
 							</tr>
 						</table>
-
-						<!-- <p style="font-weight:bold; margin-bottom:0">Tags</p>
-						<span v-for="(tag, index) in tags" :key="index" class="badge badge-pill badge-dark tag-badge">
-							{{tag}}
-						</span> -->
 						
 					</div>
 
 					<div class="col-md-8">
 
-						<h1 class="title-header">
-							{{asset.name}}
-						</h1>
-
-						<h6 class="subheader">
-							v{{asset.version}}
-						</h6>
+						<div class="row">
+							<div class="col-md-12">
+								<h2 class="title-header float-left" style="margin:0">
+									{{asset.name}}
+								</h2>
+								<version-select :versionMap="asset.versions" class="float-right"/>
+							</div>
+						</div>
 
 						<hr>
 
@@ -58,12 +54,6 @@
 								</a>
 							</li>
 
-							<!-- <li>
-								<a :href="assetStoreUrl" target="_">
-									View on Asset Store
-									<i class="fa fa-external-link"></i>
-								</a>
-							</li> -->
 							
 						</ul>
 
@@ -88,6 +78,8 @@
 
 	import AssetEvents from "./../../eventbuses/AssetEvents";
 
+	import VersionSelect from "./version-select";
+
 
 	export default {
 
@@ -95,7 +87,7 @@
 			"asset": Object
 		},
 		components: {
-		
+			"version-select": VersionSelect
 		},
 		data () {
 			return {
@@ -109,7 +101,7 @@
 		},
 		computed: {
 			assetStoreUrl(){
-				return this.asset.unityStoreLink;
+				return this.asset.storeUrl;
 			},
 			downloadUrl(){
 				return this.asset.downloadUrl;
@@ -123,11 +115,6 @@
 						label: "View on Asset Store",
 						icon: "external-link",
 						src: this.assetStoreUrl
-					},
-					{
-						label: "Download",
-						icon: "download",
-						src: this.downloadUrl
 					}
 				];
 			}

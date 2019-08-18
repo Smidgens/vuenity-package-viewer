@@ -48,51 +48,10 @@
 				</div>
 			</div>
 			<div class="col-md-4">
-				<v-select :closeOnSelect="false" style="width:100% !important;" :placeholder="'Tags'" :filterable="true" v-model="settings.selectedTags" :options="settings.tags" :multiple="true" :clearable="true">
-					<template slot="selected-option" slot-scope="option">
-						<span :class="option.icon"></span>
-						{{ option.label }}
-					</template>
-
-
-				</v-select>
+				<tag-select :settings="settings"/>
 			</div>
 		</div>
-		
-		<!-- <div class="row" style="margin-top:0.5em">
-
-			<div class="col-md-12">
-				<div class="settings-container">
-
-					
-					
-					<div class="float-left">
-						<label class="label">
-							Sort by
-						</label>
-						<div class="btn-group btn-group-sm " style="outline: none !important">
-							
-							<button v-for="(key, index) in sortKeys" :key="index" type="button" class="btn btn-outline-secondary mode-button" @click="setSortKey(key)">
-						
-								{{key}}
-								<i class="fa" :class="['fa-' + sortIcon]"/>
-							</button>
-						</div>
-						
-
-					</div>
-					
-					<div class="btn-group btn-group-sm float-left" style="outline: none !important; margin-left:0.5em">
-						<button v-for="(mode, key) in displayOptions" :key="key" type="button" :title="'Display as ' + key" class="btn btn-secondary mode-button" @click="setDisplayMode(key)" :disabled="isModeActive(key)">
-							<i class="fa" :class="['fa-' + mode.i]"></i>
-						</button>
-					</div> 
-				</div>
-			</div>
-
-		</div> -->
-
-		
+	
 
 	</div>
 
@@ -102,6 +61,8 @@
 <script>
 	import 'vue-select/dist/vue-select.css';
 	import VueSelect from "vue-select";
+
+	import TagSelect from "./tag-select";
 
 
 	export default {
@@ -120,7 +81,8 @@
 			}
 		},
 		components: {
-			"v-select": VueSelect
+			"v-select": VueSelect,
+			"tag-select": TagSelect
 		},
 		data () {
 			return {
@@ -190,8 +152,6 @@
 
 		.settings-container{
 			width:100%;
-			// background-color:red;
-			// height:2em;
 		}
 
 	}
