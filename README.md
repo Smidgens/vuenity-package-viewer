@@ -1,3 +1,5 @@
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Smidgens/vuejs-unity-asset-viewer/master/LICENSE)
+
 # Vue.js Unity Asset Viewer
 
 A web app that displays a list of Unity packages in a searchable interface.
