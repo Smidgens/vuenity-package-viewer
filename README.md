@@ -2,7 +2,7 @@
 
 A web app that displays a list of Unity packages in a searchable interface.
 
-The app itself stores no information by itself, and the list of packages displayed is loaded from an external manifest file.
+The app itself stores no information, and the list of packages displayed is loaded from an external manifest file.
 
 Typical information on a single package in the manifest would include its name, a url to its store page on the Unity asset store (if one exists), and urls for downloads of different versions.
 
