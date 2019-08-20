@@ -10,6 +10,8 @@ The site along with a manifest's contents can be linked to directly by embedding
 
 `https://my-site/?src=<url-encoded-path-to-my-file>`
 
+File paths in the url need to be appropriately encoded for direct linking to work. More information [here](https://www.url-encode-decode.com/). 
+
 *Note: This app is intended as a tool for conveniently sharing package downloads between team members in an organization. It assumes that if a manifest linked to contains download urls to packages, the manner in which these were obtained comply with Unity's purchase policies.*
 
 ## Manifest Schema
@@ -50,7 +52,7 @@ Example:
 mysite.com/
 
 # Invalid
-mysite.com/my-app
+mysite.com/my-app/
 ```
 
 Further information on development/deployment: [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
