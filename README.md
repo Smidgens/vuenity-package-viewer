@@ -35,7 +35,7 @@ The app assumes the following data structure in the loaded manifest file (.json)
 	"name": "Some Package", // required
 	"thumbnail": "<url_to_preview>", // optional
 	"storeUrl": "<url_to_asset_store>", // optional
-	"tags": [
+	"tags": [ // optional
 		"tools",
 		"models"
 	],
