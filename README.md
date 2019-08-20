@@ -16,7 +16,9 @@ File paths in the url need to be appropriately encoded for direct linking to wor
 
 *Note: This app is intended as a tool for conveniently sharing package downloads between team members in an organization. It assumes that if a manifest linked to contains download urls to packages, the manner in which these were obtained comply with Unity's purchase policies.*
 
-## Manifest Schema
+## Manifest
+
+The app assumes the following data structure in the loaded manifest file (.json).
 
 ``` javascript
 
@@ -28,16 +30,16 @@ File paths in the url need to be appropriately encoded for direct linking to wor
 ]
 
 
-// Package data
+// Package
 {
-	"name": "Some Package",
-	"thumbnail": "<url_to_preview>",
-	"storeUrl": "<url_to_asset_store>",
+	"name": "Some Package", // required
+	"thumbnail": "<url_to_preview>", // optional
+	"storeUrl": "<url_to_asset_store>", // optional
 	"tags": [
 		"tools",
 		"models"
 	],
-	"versions": {
+	"versions": { // optional
 		"1.0": "mysite.com/some_package/1.0.unitypackage",
 		"2.0": "mysite.com/some_package/2.0.unitypackage"
 	}
