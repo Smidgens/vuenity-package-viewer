@@ -16,7 +16,32 @@ File paths in the url need to be appropriately encoded for direct linking to wor
 
 ## Manifest Schema
 
-Todo: description of manifest schema and required properties.
+``` javascript
+
+// Manifest
+[
+	{ /* package */ },
+	{ /* package */ }
+	// ...
+]
+
+
+// Package data
+{
+		"name": "Some Package",
+		"thumbnail": "<url_to_preview>",
+		"storeUrl": "<url_to_asset_store>",
+		"tags": [
+			"tools",
+			"models"
+		],
+		"versions": {
+			"1.0": "mysite.com/some_package/1.0.unitypackage",
+			"2.0": "mysite.com/some_package/2.0.unitypackage"
+		}
+}
+
+```
 
 ## Development
 
