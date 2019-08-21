@@ -14,7 +14,9 @@ The site along with a manifest's contents can be linked to directly by embedding
 
 File paths in the url need to be appropriately encoded for direct linking to work. More information [here](https://www.url-encode-decode.com/). 
 
-*Note: This app is intended as a tool for conveniently sharing package downloads between team members in an organization. It assumes that if a manifest linked to contains download urls to packages, the manner in which these were obtained comply with Unity's purchase policies. More information [here](https://support.unity3d.com/hc/en-us/sections/360003854472-Asset-Store-Customers-).*
+### Disclaimer
+
+*This project is intended as a tool for sharing packages between team members in an organization in a convenient manner. It assumes that if a manifest linked to contains download urls to packages, the manner in which these were obtained comply with Unity's purchase policies. More information [here](https://support.unity3d.com/hc/en-us/sections/360003854472-Asset-Store-Customers-).*
 
 ## Manifest
 
